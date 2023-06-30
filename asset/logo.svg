@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123.88 329.32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b43528;
+      }
+
+      .cls-2 {
+        fill: #00906a;
+      }
+
+      .cls-3 {
+        stroke: #00906a;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-4 {
+        stroke: #b43528;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <circle class="cls-2" cx="8.87" cy="52.99" r="8.87"/>
+    <circle class="cls-2" cx="83.57" cy="48.47" r="8.87"/>
+    <circle class="cls-1" cx="83.57" cy="131.9" r="8.87"/>
+    <circle class="cls-1" cx="83.57" cy="216.34" r="8.87"/>
+    <circle class="cls-2" cx="8.87" cy="93.82" r="8.87"/>
+    <circle class="cls-1" cx="8.87" cy="263.42" r="8.87"/>
+    <circle class="cls-1" cx="8.87" cy="306.69" r="8.87"/>
+    <circle class="cls-2" cx="46.51" cy="70.21" r="8.87"/>
+    <circle class="cls-1" cx="46.51" cy="154.9" r="8.87"/>
+    <circle class="cls-1" cx="46.43" cy="239.6" r="8.87"/>
+    <polyline class="cls-4" points="46.43 239.6 46.43 325.29 8.87 306.69"/>
+    <polyline class="cls-4" points="83.57 131.9 121.13 193.38 83.57 302.47 83.57 216.34"/>
+    <polyline class="cls-4" points="8.87 263.42 8.87 178.12 46.51 154.9"/>
+    <polyline class="cls-3" points="46.51 70.21 83.57 90.19 8.87 135.99 8.87 93.82"/>
+    <polyline class="cls-3" points="8.87 52.99 83.57 4.6 83.57 48.47"/>
+  </g>
+</svg>
