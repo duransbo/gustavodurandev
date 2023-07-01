@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.43 140.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00906a;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #00906a;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <circle class="cls-1" cx="8.87" cy="52.99" r="8.87"/>
+    <circle class="cls-1" cx="83.57" cy="48.47" r="8.87"/>
+    <circle class="cls-1" cx="8.87" cy="93.82" r="8.87"/>
+    <circle class="cls-1" cx="46.51" cy="70.21" r="8.87"/>
+    <polyline class="cls-2" points="46.51 70.21 83.57 90.19 8.87 135.99 8.87 93.82"/>
+    <polyline class="cls-2" points="8.87 52.99 83.57 4.6 83.57 48.47"/>
+  </g>
+</svg>

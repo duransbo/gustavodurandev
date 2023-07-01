@@ -1,53 +1,109 @@
 <!DOCTYPE html>
-	<html lang="en">
+	<html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Gustavo Duran</title>
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
-
-			* {
-				font-family: 'Inconsolata', monospace;
-				margin: 0;
-			}
-
-			main::before {
-				content: "";
-
-				width: 100%;
-				height: 75%;
-				top: 10%;
-				position: fixed;
-				z-index: -1;
-
-				background-image: url("asset/logo.svg");
-				background-size: contain;
-				background-position: 1rem center;
-				background-repeat: no-repeat;
-			}
-
-			header {
-				width: 100vw;
-				height: 100vh;
-				display: flex;
-
-				justify-content: flex-end;
-				align-items: flex-end;
-			}
-
-			h1 {
-				margin: 1rem;
-				color: #111;
-			}
-		</style>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<main>
+		<header id="header">
+			<h1>Gustavo Duran Ferreira</h1>
+			<h2>Software Developer</h2>
+		</header>
+
+		<section id="info">
 			<header>
-				<h1>GUSTAVO DURAN</h1>
+				<h1>Perfil</h1>
 			</header>
-		</main>
+
+			<table>
+				<tr>
+					<th>idade</th>
+					<td>25 Anos</td>
+				</tr>
+				<tr>
+					<th>estado</th>
+					<td>São Paulo</td>
+				</tr>
+				<tr>
+					<th>cidade</th>
+					<td>Americana</td>
+				</tr>
+				<tr>
+					<th>telefone</th>
+					<td>(19) 97100-0975</td>
+				</tr>
+				<tr>
+					<th>e-mail</th>
+					<td>gustavo.duran.ferreira@hotmail.com</td>
+				</tr>
+			</table>
+		</section>
+
+		<section id="career">
+			<header>
+				<h1>Carreira</h1>
+			</header>
+
+			<div class="half">
+				<section class="school">
+					<header>
+						<h1>Acadêmica</h1>
+					</header>
+
+					<div class="step">
+						<h2>Técnico em Informática</h2>
+						<p>jan 2013 - dez 2015</p>
+					</div>
+
+					<div class="step">
+						<h2>Técnologo em Sistemas para Internet</h2>
+						<p>jan 2016 - dez 2018</p>
+					</div>
+
+					<div class="step">
+						<h2>Especialização em Inteligência Artifical</h2>
+						<p>jun 2019 - jun 2021</p>
+					</div>
+				</section>
+
+				<section class="job">
+					<header>
+						<h1>Profissional</h1>
+					</header>
+
+					<div class="step">
+						<h2>Curso Web Design</h2>
+						<p>jul 2012 - jun 2013</p>
+					</div>
+
+					<div class="step">
+						<h2>Agência Zum</h2>
+						<p>set 2013 - mar 2016</p>
+					</div>
+
+					<div class="step">
+						<h2>Grupo Ambplan</h2>
+						<p>jan 2017 - ago 2017</p>
+					</div>
+
+					<div class="step">
+						<h2>Unimed Leste Paulista</h2>
+						<p>ago 2017 - out 2020</p>
+					</div>
+
+					<div class="step">
+						<h2>Philips</h2>
+						<p>out 2020 - hoje</p>
+					</div>
+				</section>
+			</div>
+		</section>
+
+		<footer>
+			<a href="aneios">dev/aneios</a>
+		</footer>
 	</body>
 </html>

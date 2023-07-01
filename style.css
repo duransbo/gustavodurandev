@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+	font-family: 'Inconsolata', monospace;
+	margin: 0;
+
+	--white: white;
+	--black: #111;
+	--green: #00906A;
+	--red: #B43528;
+}
+
+#header {
+	padding: 3rem 6rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--white);
+	background-image: url("asset/logo.svg");
+	background-repeat: no-repeat;
+	background-size: auto 80%;
+	background-position: 1rem center;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#header::after {
+	content: '';
+	border: solid transparent;
+	border-width: 25px 75px 0 75px;
+	border-top-color: var(--white);
+	z-index: 2;
+	position: absolute;
+	bottom: calc(25px * -1);
+	left: calc(50% - 75px);
+}
+
+
+#header img {
+	height: 10rem;
+}
+
+#header h1 {
+	font-size: 2rem;
+	color: var(--black);
+}
+
+#header h2 {
+	font-size: 1.5rem;
+	color: var(--green);
+}
+
+#info {
+	padding: 50px 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: var(--green);
+	color: var(--white);
+}
+
+#info h1 {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+#info tr > * {
+	width: 50%;
+}
+
+#info th {
+	text-align: right;
+	text-transform: capitalize;
+	color: var(--black);
+}
+
+#info th:after {
+	content: ":";
+}
+
+#career {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#career h1 {
+	text-transform: uppercase;
+	color: var(--red);
+}
+
+#career .half {
+	display: flex;
+	justify-content: space-around;
+}
+
+#career section {
+	width: 45%;
+	margin-top: 1rem;
+}
+
+#career .step {
+	--size: .8rem;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#career .step:after {
+    content: '';
+    width: 5px;
+    height: 100%;
+    border: solid var(--green);
+    position: absolute;
+    top: 0;
+}
+
+#career .school .step:after {
+	border-width: 2px 0 2px 2px;
+    right: -15px;
+}
+
+#career .job .step:after {
+	border-width: 2px 2px 2px 0;
+	left: -15px;
+}
+
+#career .half h1 {
+	text-align: center;
+	color: var(--green);
+}
+
+#career h2 {
+	margin-bottom: 2rem;
+}
+
+#career p {
+	position: relative;
+	text-align: right;
+}
+
+#career p:before {
+	content: '';
+	width: 100%;
+	border: solid var(--green);
+	border-width: 2px 0 0 0;
+	position: absolute;
+	top: -20px;
+	left: 0;
+	transform: rotateZ(-3deg);
+}
+
+#career .school .step:nth-of-type(1) {
+	height: calc(var(--size) * 36);
+	margin-top: calc(var(--size) * 10);
+}
+
+#career .school .step:nth-of-type(2) {
+	height: calc(var(--size) * 36);
+	margin-top: var(--size);
+}
+
+#career .school .step:nth-of-type(3) {
+	height: calc(var(--size) * 36);
+	margin-top: calc(var(--size) * 7);
+}
+
+#career .job .step:nth-of-type(1) {
+	height: calc(var(--size) * 12);
+	margin-top: calc(var(--size) * 4);
+}
+
+#career .job .step:nth-of-type(2) {
+	height: calc(var(--size) * 31);
+	margin-top: calc(var(--size) * 2);
+}
+
+#career .job .step:nth-of-type(3) {
+	height: calc(var(--size) * 8);
+	margin-top: calc(var(--size) * 9);
+}
+
+#career .job .step:nth-of-type(4) {
+	height: calc(var(--size) * 38);
+	margin-top: var(--size);
+}
+
+#career .job .step:nth-of-type(5) {
+	height: calc(var(--size) * 36);
+	margin-top: var(--size);
+}
+
+footer {
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	background-color: var(--red);
+}
+
+footer a {
+	color: var(--white);
+}
