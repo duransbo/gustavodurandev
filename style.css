@@ -25,18 +25,6 @@
 	text-transform: uppercase;
 }
 
-#header::after {
-	content: '';
-	border: solid transparent;
-	border-width: 25px 75px 0 75px;
-	border-top-color: var(--white);
-	z-index: 2;
-	position: absolute;
-	bottom: calc(25px * -1);
-	left: calc(50% - 75px);
-}
-
-
 #header img {
 	height: 10rem;
 }
@@ -52,7 +40,7 @@
 }
 
 #info {
-	padding: 50px 0 2rem;
+	padding: 50px 2rem 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -65,8 +53,10 @@
 	text-align: center;
 }
 
-#info tr > * {
+#info tr th,
+#info tr td {
 	width: 50%;
+	word-break: break-all;
 }
 
 #info th {
@@ -91,32 +81,14 @@
 	color: var(--red);
 }
 
-#career .half {
-	display: flex;
-	justify-content: space-around;
-}
-
-#career section {
-	width: 45%;
-	margin-top: 1rem;
-}
-
 #career .step {
-	--size: .8rem;
+	--size: 2rem;
 
+	margin-bottom: 2rem;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-
-#career .step:after {
-    content: '';
-    width: 5px;
-    height: 100%;
-    border: solid var(--green);
-    position: absolute;
-    top: 0;
 }
 
 #career .school .step:after {
@@ -130,6 +102,7 @@
 }
 
 #career .half h1 {
+	margin: 1rem 0;
 	text-align: center;
 	color: var(--green);
 }
@@ -138,12 +111,12 @@
 	margin-bottom: 2rem;
 }
 
-#career p {
+#career span {
 	position: relative;
 	text-align: right;
 }
 
-#career p:before {
+#career span:before {
 	content: '';
 	width: 100%;
 	border: solid var(--green);
@@ -154,44 +127,8 @@
 	transform: rotateZ(-3deg);
 }
 
-#career .school .step:nth-of-type(1) {
-	height: calc(var(--size) * 36);
-	margin-top: calc(var(--size) * 10);
-}
-
-#career .school .step:nth-of-type(2) {
-	height: calc(var(--size) * 36);
-	margin-top: var(--size);
-}
-
-#career .school .step:nth-of-type(3) {
-	height: calc(var(--size) * 36);
-	margin-top: calc(var(--size) * 7);
-}
-
-#career .job .step:nth-of-type(1) {
-	height: calc(var(--size) * 12);
-	margin-top: calc(var(--size) * 4);
-}
-
-#career .job .step:nth-of-type(2) {
-	height: calc(var(--size) * 31);
-	margin-top: calc(var(--size) * 2);
-}
-
-#career .job .step:nth-of-type(3) {
-	height: calc(var(--size) * 8);
-	margin-top: calc(var(--size) * 9);
-}
-
-#career .job .step:nth-of-type(4) {
-	height: calc(var(--size) * 38);
-	margin-top: var(--size);
-}
-
-#career .job .step:nth-of-type(5) {
-	height: calc(var(--size) * 36);
-	margin-top: var(--size);
+#career p {
+	margin-top: 2rem;
 }
 
 footer {
@@ -203,4 +140,80 @@ footer {
 
 footer a {
 	color: var(--white);
+}
+
+@media screen {
+
+	#header::after {
+		content: '';
+		border: solid transparent;
+		border-width: 25px 75px 0 75px;
+		border-top-color: var(--white);
+		z-index: 2;
+		position: absolute;
+		bottom: calc(25px * -1);
+		left: calc(50% - 75px);
+	}
+
+}
+
+@media all and (min-width: 600px) {
+
+	#career .half {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	#career section {
+		width: 45%;
+	}
+
+	#career .step:after {
+		content: '';
+		width: 5px;
+		height: 100%;
+		border: solid var(--green);
+		position: absolute;
+		top: 0;
+	}
+
+	#career .school .step:nth-of-type(1) {
+		height: calc(var(--size) * 36);
+		margin-top: calc(var(--size) * 6);
+	}
+	
+	#career .school .step:nth-of-type(2) {
+		height: calc(var(--size) * 36);
+		margin-top: var(--size);
+	}
+	
+	#career .school .step:nth-of-type(3) {
+		height: calc(var(--size) * 36);
+		margin-top: calc(var(--size) * 7);
+	}
+	
+	#career .job .step:nth-of-type(1) {
+		height: calc(var(--size) * 12);
+	}
+	
+	#career .job .step:nth-of-type(2) {
+		height: calc(var(--size) * 31);
+		margin-top: calc(var(--size) * 2);
+	}
+	
+	#career .job .step:nth-of-type(3) {
+		height: calc(var(--size) * 8);
+		margin-top: calc(var(--size) * 9);
+	}
+	
+	#career .job .step:nth-of-type(4) {
+		height: calc(var(--size) * 38);
+		margin-top: var(--size);
+	}
+	
+	#career .job .step:nth-of-type(5) {
+		height: calc(var(--size) * 36);
+		margin-top: var(--size);
+	}
+
 }
