@@ -10,23 +10,41 @@
 	--red: #B43528;
 }
 
+body {
+	background-image: url("asset/texture.jpg");
+	background-attachment: fixed;
+}
+
 #header {
-	padding: 3rem 6rem;
+	height: 95vh;
+	min-height: 300px;
+	padding: 3rem;
+	box-sizing: border-box;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--white);
-	background-image: url("asset/logo.svg");
-	background-repeat: no-repeat;
-	background-size: auto 80%;
-	background-position: 1rem center;
+	justify-content: center;
 	text-align: center;
 	text-transform: uppercase;
+	background-color: var(--white);
+}
+
+#header:after {
+	--size: 40px;
+
+	content: "";
+	border: solid transparent;
+	border-width: calc(var(--size) / 2) var(--size) 0 var(--size);
+	border-top-color: var(--red);
+	position: absolute;
+	bottom: 2rem;
+	left: calc(50% - var(--size));
 }
 
 #header img {
-	height: 10rem;
+	height: 50%;
+	margin-bottom: 2rem;
 }
 
 #header h1 {
@@ -39,8 +57,23 @@
 	color: var(--green);
 }
 
+.slogan {
+	padding: 4rem;
+	color: var(--white);
+	font-size: 3rem;
+	font-weight: 900;
+	font-style: italic;
+	justify-content: center;
+	text-align: center;
+	text-shadow: 2px 2px 5px #000;
+}
+
+.shadow {
+	box-shadow: 0px 0px 20px #000;
+}
+
 #info {
-	padding: 50px 2rem 2rem;
+	padding: 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -73,12 +106,12 @@
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	background-color: var(--white);
 }
 
 #career h1 {
 	text-transform: uppercase;
-	color: var(--red);
+	color: var(--green);
 }
 
 #career .step {
@@ -102,9 +135,8 @@
 }
 
 #career .half h1 {
-	margin: 1rem 0;
+	margin: 2rem 0;
 	text-align: center;
-	color: var(--green);
 }
 
 #career h2 {
@@ -117,7 +149,7 @@
 }
 
 #career span:before {
-	content: '';
+	content: "";
 	width: 100%;
 	border: solid var(--green);
 	border-width: 2px 0 0 0;
@@ -131,30 +163,120 @@
 	margin-top: 2rem;
 }
 
+#career a {
+	color: var(--red);
+}
+
+#devaneios {
+	padding: 2rem;
+	background-color: var(--red);
+	color: var(--white);
+}
+
+#devaneios p {
+	margin-top: 2rem;
+}
+
+#devaneios ul {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+#devaneios li {
+	--size: calc((100vw - (2rem * 4)) / 3);
+
+	width: var(--size);
+	height: var(--size);
+	margin-top: 2rem;
+	padding: 2rem;
+	box-sizing: border-box;
+	border: .3rem solid var(--white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .9));
+	color: var(--white);
+	text-align: center;
+}
+
+#devaneios a {
+	text-decoration: none;
+}
+
+#devaneios button {
+	--size: 4px;
+
+	width: 100%;
+	padding: 1rem;
+	margin-top: 2rem;
+	background-color: var(--green);
+	background-image: linear-gradient(145deg, #009a71, #00825f);;
+	border: none;
+	color: var(--white);
+	font-size: 1rem;
+	box-shadow: var(--size) var(--size) calc(var(--size) * 2) #992d22,
+				calc(var(--size) * -1) calc(var(--size) * -1) calc(var(--size) * 2) #cf3d2e;
+}
+
+#papers {
+	padding: 2rem;
+	background-color: var(--green);
+	color: var(--white);
+}
+
+#papers h1 {
+	margin-bottom: 2rem;
+}
+
+#papers a {
+	text-decoration: none;
+}
+
+#papers .group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#papers .paper {
+	--size: calc(100vw - 4rem);
+
+	width: var(--size);
+	height: calc(var(--size) * 1.4);
+	margin-top: 2rem;
+	box-sizing: border-box;
+	padding: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--white);
+	color: var(--black);
+	justify-content: center;
+}
+
+#papers h2 {
+	align-self: flex-start;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#papers p {
+	align-self: center;
+}
+
+#papers span {
+	align-self: flex-end;
+}
+
 footer {
 	padding: 2rem;
 	display: flex;
 	justify-content: center;
-	background-color: var(--red);
 }
 
-footer a {
-	color: var(--white);
-}
-
-@media screen {
-
-	#header::after {
-		content: '';
-		border: solid transparent;
-		border-width: 25px 75px 0 75px;
-		border-top-color: var(--white);
-		z-index: 2;
-		position: absolute;
-		bottom: calc(25px * -1);
-		left: calc(50% - 75px);
-	}
-
+footer img {
+	height: 50px;
 }
 
 @media all and (min-width: 600px) {
@@ -214,6 +336,14 @@ footer a {
 	#career .job .step:nth-of-type(5) {
 		height: calc(var(--size) * 36);
 		margin-top: var(--size);
+	}
+
+	#papers .paper {
+		--size: calc((100vw - (2rem * 3)) / 2);
+	}
+
+	#papers h2 {
+		font-size: 1rem;
 	}
 
 }
