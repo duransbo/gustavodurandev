@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
-* {
+body {
+	background-image: url("asset/texture.jpg");
+	background-attachment: fixed;
 	font-family: 'Inconsolata', monospace;
 	margin: 0;
 
@@ -10,9 +12,8 @@
 	--red: #B43528;
 }
 
-body {
-	background-image: url("asset/texture.jpg");
-	background-attachment: fixed;
+h1, h2, p {
+	margin: 0;
 }
 
 #header {
@@ -69,14 +70,20 @@ body {
 }
 
 .shadow {
+	display: flex;
+	justify-content: center;
 	box-shadow: 0px 0px 20px #000;
 }
 
-#info {
+.wrapper {
+	width: 100vw;
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+#info {
 	background-color: var(--green);
 	color: var(--white);
 }
@@ -84,6 +91,10 @@ body {
 #info h1 {
 	margin-bottom: 1rem;
 	text-align: center;
+}
+
+#info table {
+	width: 100%;
 }
 
 #info tr th,
@@ -102,10 +113,11 @@ body {
 	content: ":";
 }
 
+#info a {
+	color: var(--white);
+}
+
 #career {
-	padding: 2rem;
-	display: flex;
-	flex-direction: column;
 	background-color: var(--white);
 }
 
@@ -168,12 +180,12 @@ body {
 }
 
 #devaneios {
-	padding: 2rem;
 	background-color: var(--red);
 	color: var(--white);
 }
 
-#devaneios p {
+#devaneios p,
+#devaneios h2 {
 	margin-top: 2rem;
 }
 
@@ -185,7 +197,7 @@ body {
 }
 
 #devaneios li {
-	--size: calc((100vw - (2rem * 4)) / 3);
+	--size: calc(100vw - 4rem);
 
 	width: var(--size);
 	height: var(--size);
@@ -215,13 +227,13 @@ body {
 	background-image: linear-gradient(145deg, #009a71, #00825f);;
 	border: none;
 	color: var(--white);
-	font-size: 1rem;
+	font-family: inherit;
+	font-size: inherit;
 	box-shadow: var(--size) var(--size) calc(var(--size) * 2) #992d22,
 				calc(var(--size) * -1) calc(var(--size) * -1) calc(var(--size) * 2) #cf3d2e;
 }
 
 #papers {
-	padding: 2rem;
 	background-color: var(--green);
 	color: var(--white);
 }
@@ -259,10 +271,12 @@ body {
 	align-self: flex-start;
 	text-align: center;
 	text-transform: uppercase;
+	font-size: 1.2rem;
 }
 
 #papers p {
 	align-self: center;
+	font-size: .8rem;
 }
 
 #papers span {
@@ -279,7 +293,17 @@ footer img {
 	height: 50px;
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 500px) {
+	#papers h2 {
+		font-size: 2rem;
+	}
+
+	#papers p {
+		font-size: 1.3rem;
+	}
+}
+
+@media all and (min-width: 700px) {
 
 	#career .half {
 		display: flex;
@@ -338,6 +362,10 @@ footer img {
 		margin-top: var(--size);
 	}
 
+	#devaneios li {
+		--size: calc((100vw - (2rem * 4)) / 3);
+	}
+
 	#papers .paper {
 		--size: calc((100vw - (2rem * 3)) / 2);
 	}
@@ -346,4 +374,41 @@ footer img {
 		font-size: 1rem;
 	}
 
+	#papers h2 {
+		font-size: 1.7rem;
+	}
+
+	#papers p {
+		font-size: 1rem;
+	}
+
+}
+
+@media all and (min-width: 1200px) {
+	body {
+		font-size: 20px;
+
+		--max: 1000px;
+	}
+
+	.wrapper {
+		padding: 4rem;
+		max-width: var(--max);
+	}
+
+	#devaneios li {
+		--size: calc((var(--max) - (2rem * 4)) / 3);
+	}
+
+	#papers .paper {
+		--size: calc((var(--max) - (2rem * 3)) / 2);
+	}
+
+	#papers h2 {
+		font-size: 1.5rem;
+	}
+
+	#papers p {
+		font-size: 1rem;
+	}
 }
