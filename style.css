@@ -214,6 +214,8 @@ h1, h2, p {
 }
 
 #devaneios a {
+	background-position: center;
+	background-size: cover;
 	text-decoration: none;
 }
 

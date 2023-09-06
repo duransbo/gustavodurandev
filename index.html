@@ -183,7 +183,7 @@
 
 				<ul></ul>
 
-				<a href="#"><button>Ver lista completa de artigos</button></a>
+				<a href="aneios"><button>Ver lista completa de artigos</button></a>
 			</div>
 		</section>
 
@@ -244,6 +244,7 @@
 			const createPostLink = post => {
 				const a = document.createElement('a');
 				a.setAttribute('href', `./aneios/${post.slug}`);
+				a.style.backgroundImage = `url(./aneios/src/posts/${post.slug}/${post.img}`;
 
 				const li = document.createElement('li');
 				li.innerText = `${post.title}: ${post.headline}`;
