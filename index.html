@@ -177,19 +177,11 @@
 
 				<h2>Ultimos postados</h2>
 
-				<ul>
-					<a href="#"><li>Interação Humano Computador</li></a>
-					<a href="#"><li>Lógica de programação: Progração geral na prática</li></a>
-					<a href="#"><li>Introdução a inteligência artificial: Como uma máquina aprende</li></a>
-				</ul>
+				<ul></ul>
 
 				<h2>Mais Vistos</h2>
 
-				<ul>
-					<a href="#"><li>Interação Humano Computador</li></a>
-					<a href="#"><li>Lógica de programação: Progração geral na prática</li></a>
-					<a href="#"><li>Introdução a inteligência artificial: Como uma máquina aprende</li></a>
-				</ul>
+				<ul></ul>
 
 				<a href="#"><button>Ver lista completa de artigos</button></a>
 			</div>
@@ -234,5 +226,43 @@
 		<footer>
 			<img src="asset/leaf-w.svg">
 		</footer>
+
+		<script>
+			const getPosts = async () => {
+				const response = await fetch('./aneios/api/posts');
+				const json = await response.json();
+
+				return json;
+			};
+
+			const createPostGallery = (root, posts) => {
+				posts.forEach(post => {
+					root.append(createPostLink(post));					
+				});
+			};
+
+			const createPostLink = post => {
+				const a = document.createElement('a');
+				a.setAttribute('href', `./aneios/${post.slug}`);
+
+				const li = document.createElement('li');
+				li.innerText = `${post.title}: ${post.headline}`;
+
+				a.append(li);
+
+				return a;
+			};
+
+			const loadPosts = async () => {
+				const posts = await getPosts();
+				const lastestPosts = document.querySelectorAll('#devaneios ul')[0];
+				const readestPosts = document.querySelectorAll('#devaneios ul')[1];
+
+				createPostGallery(lastestPosts, posts.slice(0,3));
+				createPostGallery(readestPosts, posts.reverse().slice(0,3));
+			};
+
+			loadPosts();			
+		</script>
 	</body>
 </html>
